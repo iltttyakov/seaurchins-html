@@ -1,0 +1,169 @@
+.news {
+  margin-bottom: 60px;
+}
+
+.news__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.news__item {
+  position: relative;
+  padding-top: 86px;
+  margin-bottom: 72px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 268px;
+    height: 28px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../img/wave.png");
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.news__block {
+  position: relative;
+
+  display: flex;
+  padding-left: 299px;
+
+  border: dotted 6px #3d0473;
+  border-radius: 10px 10px 10px 50px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    top: -6px;
+    left: -6px;
+
+    width: calc(100% + 11px);
+    height: calc(100% + 11px);
+
+    border: dashed 6px #f83647;
+    border-radius: 10px 10px 10px 50px;
+  }
+}
+
+.news__pic {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 299px;
+  height: 100%;
+  vertical-align: bottom;
+  border-radius: 10px 10px 10px 50px;
+
+  object-fit: cover;
+}
+
+.news__right {
+  padding: 24px 26px 28px 40px;
+
+  p {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-size: 20px;
+    line-height: 30px;
+    color: #03405c;
+    letter-spacing: -0.008em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+
+    list-style: none;
+  }
+
+  p + ul {
+    margin-top: -10px;
+  }
+
+  li {
+    position: relative;
+
+    padding-left: 36px;
+
+    font-size: 20px;
+    line-height: 30px;
+    color: #03405c;
+    letter-spacing: -0.008em;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: 10px;
+
+      width: 5px;
+      height: 5px;
+
+      border-radius: 50%;
+      background-color: #03405c;
+    }
+  }
+}
+
+@media (max-width: 763px) {
+  .news__item {
+    margin-bottom: 30px;
+    padding-top: 60px;
+
+    &:first-child {
+      padding-top: 86px;
+    }
+  }
+
+  .news__block {
+    flex-direction: column;
+    padding-left: 0;
+
+    border-radius: 10px;
+
+    &::before {
+      border-radius: 10px;
+    }
+  }
+
+  .news__pic {
+    position: static;
+
+    width: 100%;
+    max-height: 359px;
+
+    border-radius: 10px 10px 30px 30px;
+  }
+
+  .news__right {
+    padding: 10px;
+
+    li {
+      padding-left: 16px;
+    }
+  }
+}

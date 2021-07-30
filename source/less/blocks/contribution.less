@@ -1,0 +1,229 @@
+.contribution__title {
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.contribution__offer {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: 54px;
+
+  font-size: 24px;
+  line-height: 34px;
+  color: #03405c;
+  text-align: center;
+}
+
+.contribution__content {
+  display: flex;
+}
+
+.contribution__left {
+  width: 400px;
+  flex-shrink: 0;
+}
+
+.contribution__list-title {
+  margin: 0;
+  margin-bottom: 26px;
+
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 400;
+  color: #14a0db;
+  text-transform: uppercase;
+}
+
+.contribution__list {
+  margin: 0;
+  margin-bottom: 41px;
+  padding: 0;
+  padding-left: 15px;
+
+  list-style: none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contribution__item {
+  position: relative;
+
+  padding-left: 36px;
+  margin-bottom: 1px;
+
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #03405c;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    margin-top: -18px;
+    width: 21px;
+    height: 29px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../img/star.png");
+  }
+}
+
+.contribution__img-container {
+  position: relative;
+
+  flex-shrink: 1;
+}
+
+.contribution__img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.contribution__slider {
+  position: absolute;
+  z-index: -1;
+  left: 70px;
+  top: 60px;
+
+  width: 386px;
+  height: 548px;
+}
+
+.contribution__slider-pic {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: all 0.2s ease;
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+.contribution__control-container {
+  position: absolute;
+  z-index: 10;
+  top: 29%;
+  right: 255px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contribution__slide-control {
+  font-size: 42px;
+  line-height: 42px;
+  color: #03405c;
+  font-weight: 700;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 1230px) {
+  .contribution {
+    margin-bottom: 40px;
+  }
+
+  .contribution__content {
+    flex-direction: column-reverse;
+  }
+
+  .contribution__img-container {
+    max-width: 764px;
+    margin: 0 auto;
+  }
+
+  .contribution__left {
+    margin-left: 124px;
+  }
+
+  .contribution__control-container {
+    top: 35%;
+    right: 182px;
+  }
+}
+
+@media (max-width: 763px) {
+  .contribution {
+    margin-bottom: 0;
+  }
+
+  .contribution__container {
+    overflow: hidden;
+  }
+
+  .contribution__title {
+    margin-bottom: 24px;
+  }
+
+  .contribution__offer {
+    margin-bottom: 25px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .contribution__left {
+    margin-left: 0;
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .contribution__img-container {
+    left: -49px;
+
+    width: 541px;
+  }
+
+  .contribution__slider {
+    left: 60px;
+
+    width: 269px;
+    height: 358px;
+  }
+
+  .contribution__list-title {
+    font-size: 30px;
+    line-height: 44px;
+  }
+
+  .contribution__control-container {
+    top: 31%;
+    right: 132px;
+  }
+
+  .contribution__slide-control {
+    font-size: 31px;
+    line-height: 31px;
+  }
+}

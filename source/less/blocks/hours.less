@@ -1,0 +1,93 @@
+.hours {
+  padding-top: 214px;
+  margin-bottom: 80px;
+}
+
+.hours__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 48px;
+  line-height: 52px;
+  color: #2dcc4a;
+  text-align: center;
+  text-shadow: 1px 1px 1px #03405c;
+}
+
+.hours__time {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 41px;
+  padding-bottom: 60px;
+
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 40px;
+  line-height: 44px;
+  color: #03405c;
+  text-align: center;
+
+  &--value {
+    font-size: 52px;
+    color: #14a0db;
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    margin-left: -135px;
+    width: 268px;
+    height: 28px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../img/wave.png");
+  }
+}
+
+.hours__undertext {
+  margin: 0 auto;
+  max-width: 905px;
+
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  color: #03405c;
+  text-align: center;
+}
+
+@media (max-width: 763px) {
+  .hours {
+    padding-top: 123px;
+    margin-bottom: 80px;
+  }
+
+  .hours__title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .hours__time {
+    padding-bottom: 47px;
+    margin-bottom: 29px;
+
+    font-size: 24px;
+    line-height: 36px;
+
+    &--value {
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+
+  .hours__undertext {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}

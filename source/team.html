@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SeaUrchins</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+<!--
+<div style="display:none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+-->
+
+<div class="visually-hidden">
+  <svg xmlns="http://www.w3.org/2000/svg" width="351.281" height="311.191" viewBox="0 0 351.281 311.191">
+    <clipPath id="teachers-photo-mask">
+      <path d="M601.041,784.416c96.864,0,134.156,62.835,134.156,147.66,0,29.876,6.585,55.256-26.593,81.344s-86.047,72.24-148.794,72.24c-36.381,0-119.134-33.83-142.156-46.88s-33.231-53.739-33.231-106.7c0-48.208,55.6-55.343,65.041-119.386S559.228,784.416,601.041,784.416Z" transform="translate(-384.438 -774.469)"/>
+    </clipPath>
+    <clipPath id="teachers-container-mask">
+      <path d="M603.2,1764.53c101.973,0,141.232,66.15,141.232,155.45,0,31.45,6.933,58.17-28,85.63s-90.585,76.05-156.642,76.05c-38.3,0-125.418-35.62-149.655-49.35s-34.984-56.58-34.984-112.33c0-50.76,58.535-58.27,68.472-125.69S559.183,1764.53,603.2,1764.53Z" transform="translate(-375.156 -1754.03)"/>
+    </clipPath>
+    <clipPath id="first-pic-mask">
+      <image id="Слой_7_копия_2" data-name="Слой 7 копия 2" width="721" height="535" xlink:href="data:img/png;base64,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"/>
+    </clipPath>
+  </svg>
+</div>
+
+<div class="first first--inner">
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__logo-container">
+        <img class="header__logo" src="img/logo.png" width="200" height="77" alt="Logo">
+      </div>
+      <div class="header__bee bee">
+        <img class="bee__pic" src="img/bee.gif" width="50" height="50" alt="Bee">
+      </div>
+      <ul class="header__menu menu">
+        <li class="menu-item-has-children">
+          <a href="#">About Us</a>
+          <ul class="sub-menu">
+            <li><a href="#">Our Philosophy</a></li>
+            <li><a href="#">Hours of operation/session</a></li>
+            <li><a href="#">Fee</a></li>
+            <li><a href="#">Location and parking</a></li>
+            <li><a href="#">Picture gallery</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Our programs</a></li>
+        <li><a href="#">For families</a></li>
+        <li><a href="#">Enrolment</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="usp usp--inner container">
+    <div class="usp__left">
+      <div class="usp__title-container">
+        <h1 class="usp__title title title--green">
+          Our team
+        </h1>
+        <img class="usp__start usp__start--1" src="img/star.png" width="19" height="25" alt="Start">
+        <img class="usp__start usp__start--2" src="img/star.png" width="19" height="25" alt="Start">
+        <img class="usp__start usp__start--3" src="img/star.png" width="19" height="25" alt="Start">
+        <img class="usp__start usp__start--4" src="img/star.png" width="19" height="25" alt="Start">
+      </div>
+    </div>
+    <div class="usp__right" id="usp__right">
+      <img class="usp__cloud usp__cloud--single usp__cloud--animation" data-id="1" id="usp__cloud--1" src="img/team-pic.png" width="761" height="551" alt="Our teams">
+    </div>
+  </section>
+</div>
+
+<section class="teachers page">
+  <div class="teachers__container container">
+    <p class="teachers__subtitle page__subtitle">
+      We believe that happy children learn better and we strive to provide the environment where children can feel safe and secure.
+    </p>
+    <ul class="teachers__list">
+
+      <li class="teachers__item teachers__item--blue">
+        <div class="teachers__left">
+          <div class="teachers__photo-container">
+            <img class="teachers__photo" src="img/teachers-1.jpg" width="351" height="311" alt="">
+          </div>
+          <div class="teachers__cloud">
+            <h3 class="teachers__name">
+              Abha Pathak
+            </h3>
+            <p class="teachers__position">
+              Director of Sea Urchins
+            </p>
+          </div>
+        </div>
+        <div class="teachers__right">
+          <p>Abha is the Nominated Supervisor and the Director of our Centre. She has a Master of Education, Bachelor of Education and a Graduate Certificate in Education (Early Childhood Leadership).</p>
+          <p>Abha has been working with little children for a long time.She has very diverse work experience including teaching in Melbourne, working as a Language and Learning Support teacher in Manchester, U.K and has over 35 years of experience as a generalist teacher, Junior Area coordinator and teacher in-charge of a primary school. Before moving to beautiful Harrington she worked as the Acting Director and Assistant Director at one of the best preschools in Canberra with over 130 places.</p>
+          <p>She loves the natural curiosity and creativity in children and wants to develop it further. Besides literacy and numeracy Abha would also like the children to be engaged further in the arts and music and she is currently working towards enhancing the existing program at Sea Urchins. She wants to make learning ‘fun’.</p>
+          <p>She is keenly interested in brain development in early childhood and its association with resilience and success in the future and how early intervention can affect giftedness and learning difficulties as well.</p>
+          <p>She also enjoys reading, drawing and painting and taking long walks along the river’s edge.</p>
+        </div>
+      </li>
+
+      <li class="teachers__item teachers__item--green">
+        <div class="teachers__left">
+          <div class="teachers__photo-container">
+            <img class="teachers__photo" src="img/teachers-2.jpg" width="351" height="311" alt="">
+          </div>
+          <div class="teachers__cloud">
+            <h3 class="teachers__name">
+              Rebecca Wells
+            </h3>
+            <p class="teachers__position">
+              Educator
+            </p>
+          </div>
+        </div>
+        <div class="teachers__right">
+          <p>Rebecca is our Educational Leader and the Room Leader of the Whales Room (3-5 year olds).</p>
+          <p>She has a diploma in Early Childhood Education and Care and a Bachelor of Teaching</p>
+          <p>(0-5). She has worked as a teacher educator for 20 years.</p>
+          <p>In her words:</p>
+          <p>“Working in Early Childhood Education has always been my interest and passion. I feel very lucky to have begun my teaching journey here at Sea Urchins from the very beginning. I love living and working in what I believe is a wonderful community and love building beautiful and respectful relationships with families from our community. I feel very lucky to be part of your children’s development and to watch them learn and grow and evolve before heading off to school.”</p>
+          <p>She also enjoys going on walks around the breakwall and spending time on the beach with her two children.</p>
+        </div>
+      </li>
+
+      <li class="teachers__item teachers__item--orange">
+        <div class="teachers__left">
+          <div class="teachers__photo-container">
+            <img class="teachers__photo" src="img/teachers-3.jpg" width="351" height="311" alt="">
+          </div>
+          <div class="teachers__cloud">
+            <h3 class="teachers__name">
+              Crystal Scott
+            </h3>
+            <p class="teachers__position">
+              Educator
+            </p>
+          </div>
+        </div>
+        <div class="teachers__right">
+          <p>Crystal works in the Starfish Room as Room Leader.  She has been an early childhood educator for five years and has recently signed back to complete her Diploma in Children’s Services. Before joining the Childcare industry, Crystal was a chef.</p>
+          <p>She enjoys encouraging children ‘s independence and watching the satisfaction and sense of accomplishment that comes on their faces as they achieve their goal or complete a task.</p>
+          <p>Outside of work she likes spending time with her two boys and renovating her house.</p>
+        </div>
+      </li>
+
+      <li class="teachers__item teachers__item--blue">
+        <div class="teachers__left">
+          <div class="teachers__photo-container">
+            <img class="teachers__photo" src="img/teachers-4.jpg" width="351" height="311" alt="">
+          </div>
+          <div class="teachers__cloud">
+            <h3 class="teachers__name">
+              Hannah Christensen
+            </h3>
+            <p class="teachers__position">
+              Educator
+            </p>
+          </div>
+        </div>
+        <div class="teachers__right">
+          <p>Hannah is the Room Leader of the 0-2 Jellyfish room. She works from Monday to Friday.</p>
+          <p>She is currently completing her Diploma in Children Services and has worked in Child Care for 8 years. She enjoys working with families and listening to the children to build relationships and help children learn.</p>
+          <p>In Hannah’s own words “outside of work I enjoy camping, swimming at the beach and catching up with family.”</p>
+        </div>
+      </li>
+
+      <li class="teachers__item teachers__item--green">
+        <div class="teachers__left">
+          <div class="teachers__photo-container">
+            <img class="teachers__photo" src="img/teachers-5.jpg" width="351" height="311" alt="">
+          </div>
+          <div class="teachers__cloud">
+            <h3 class="teachers__name">
+              Jessica Mongan
+            </h3>
+            <p class="teachers__position">
+              Educator
+            </p>
+          </div>
+        </div>
+        <div class="teachers__right">
+          <p>Jessica has been working locally in childcare for 15 years. She has a Diploma in Early Childhood Education and Care   and is currently working in the Whales Room on Thursdays and Fridays.</p>
+          <p>In her own words:</p>
+          <p>“I am passionate in engaging children in learning relationships; helping to prepare children for the transition to Primary school, supporting them to become confident and enthusiastic learners.</p>
+          <p>Outside of work I enjoy family time, caravanning, fishing and bike riding. I am also interested in creative arts and community programs.”</p>
+        </div>
+      </li>
+
+      <li class="teachers__item teachers__item--orange">
+        <div class="teachers__left">
+          <div class="teachers__photo-container">
+            <img class="teachers__photo" src="img/teachers-6.jpg" width="351" height="311" alt="">
+          </div>
+          <div class="teachers__cloud">
+            <h3 class="teachers__name">
+              Sarah Pieschel
+            </h3>
+            <p class="teachers__position">
+              Educator
+            </p>
+          </div>
+        </div>
+        <div class="teachers__right">
+          <p>Since gaining her Diploma Sarah has worked for nearly 30 years as an Early Childhood Educator, both in the UK and Australia. In her own words “Early Childhood Education is my passion and feel honoured to have been part of so many children’s journey from infants to heading off to primary school. I am lucky to live, work and volunteer in the beautiful community of Harrington. I truly believe it takes a village to raise a child.”</p>
+          <p>Sarah works three days a week - Mondays, Tuesdays and Wednesdays in the Whales room</p>
+        </div>
+      </li>
+
+      <li class="teachers__item teachers__item--blue">
+        <div class="teachers__left">
+          <div class="teachers__photo-container">
+            <img class="teachers__photo" src="img/teachers-7.jpg" width="351" height="311" alt="">
+          </div>
+          <div class="teachers__cloud">
+            <h3 class="teachers__name">
+              Katie Plevey
+            </h3>
+            <p class="teachers__position">
+              Educator
+            </p>
+          </div>
+        </div>
+        <div class="teachers__right">
+          <p>Katie has worked at Sea Urchins when the Centre was with the previous owner. She has completed her Cert III and Diploma in Children’s Services (Early Childhood Education and Care). Now she has started back, working on Wednesdays in the Starfish Room (2-3 year olds).</p>
+          <p>In Katie’s own words:</p>
+          <p>“I have had the opportunity to work alongside a lot of passionate educators and have had the privilege of teaching and mentoring new educators who venture into the industry.</p>
+          <p>Over the years I have built a passion for providing quality and nurturing care to all children and families. I feel one of my strongest attributes as an educator is building and maintaining positive relationships with families and educators.</p>
+          <p>In my spare time I enjoy spending time outdoors exploring with my 18 month old and teaching her all about the world. We enjoy the beach and discovering new things together as a family.”</p>
+        </div>
+      </li>
+
+      <li class="teachers__item teachers__item--green">
+        <div class="teachers__left">
+          <div class="teachers__photo-container">
+            <img class="teachers__photo" src="img/teachers-8.jpg" width="351" height="311" alt="">
+          </div>
+          <div class="teachers__cloud">
+            <h3 class="teachers__name">
+              Shinal Lal
+            </h3>
+            <p class="teachers__position">
+              Educator
+            </p>
+          </div>
+        </div>
+        <div class="teachers__right">
+          <p>Shinal started working in childcare industry in year 2008 and has been working at Sea Urchins for a few years. She has completed her Certificate III in Early Childhood Education and Care and is about to complete her Diploma studies. She generally works the afternoon shift and is able to relate well
+            with children in all age groups at our Centre.</p>
+          <p>In her own words:</p>
+          <p>“What do I like about childcare is being able to teach a child something new and watching the
+          ‘twinkle’ in their eyes. Also listening to them whistle as they play - how their imaginations
+            works…makes me smile!”</p>
+          <p>In her spare time she loves cooking and travelling.
+        </div>
+      </li>
+
+      <li class="teachers__item teachers__item--orange">
+        <div class="teachers__left">
+          <div class="teachers__photo-container">
+            <img class="teachers__photo" src="img/teachers-9.jpg" width="351" height="311" alt="">
+          </div>
+          <div class="teachers__cloud">
+            <h3 class="teachers__name">
+              Rebecca Potts
+            </h3>
+            <p class="teachers__position">
+              Educator
+            </p>
+          </div>
+        </div>
+        <div class="teachers__right">
+          <p>Rebecca completed her Cert III in Early Childhood Education and Care and began working at Sea Urchins as a casual educator.</p>
+          <p>In her own words:</p>
+          <p>“I have had a passion for working with young children ever since I was a little girl. I enjoy reading books based on what the children are learning, singing songs and encouraging the children to join in at group time and also making sure transitioning runs smoothly for the child. My first priority is the safety of each child. In the upcoming years I hope to continue my career at Sea Urchins and hope to meet you and your child so we can learn and have fun together.”</p>
+        </div>
+      </li>
+
+      <li class="teachers__item teachers__item--blue">
+        <div class="teachers__left">
+          <div class="teachers__photo-container">
+            <img class="teachers__photo" src="img/teachers-10.jpg" width="351" height="311" alt="">
+          </div>
+          <div class="teachers__cloud">
+            <h3 class="teachers__name">
+              Krishneel Lal
+            </h3>
+            <p class="teachers__position">
+              Educator
+            </p>
+          </div>
+        </div>
+        <div class="teachers__right">
+          <p>Krishneel has been working with Sea Urchins for over one and a half years. He began as a trainee at the end of 2018 and is about to complete his Certificate III in Early Childhood Education and Care. He works mostly in the Whales Room along with two more teachers. Although you may find him in any of the rooms as he may relieve other educators for morning tea or lunch.</p>
+          <p>In his own words:</p>
+          <p>“For me childcare is an awesome industry to be in. It’s filled with uncontrollable laughter, heaps of cute moments and it's full of life. It's such a beautiful experience to be around young minds that are full of curiosity, imagination and craziness. I am very grateful to be in the childcare industry and when I am not on the floor I love to play video games, watch cartoons and socialise with my family and friends.”</p>
+        </div>
+      </li>
+
+      <li class="teachers__item teachers__item--green">
+        <div class="teachers__left">
+          <div class="teachers__photo-container">
+            <img class="teachers__photo" src="img/teachers-11.jpg" width="351" height="311" alt="">
+          </div>
+          <div class="teachers__cloud">
+            <h3 class="teachers__name">
+              Tegan Farquhar
+            </h3>
+            <p class="teachers__position">
+              Educator
+            </p>
+          </div>
+        </div>
+        <div class="teachers__right">
+          <p>In Tegan’s own words she “absolutely loves working with kids and their energy, it is super rewarding, fulfilling and is a privilege to work with children” She aims to make learning a fun experience for the children to remember whilst being the best role model she can be. She also loves the continual learning that comes along with this role.</p>
+          <p>Tegan has just completed her Certificate III in Children’s Education and Care.</p>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__logo-container">
+        <img class="footer__logo" src="img/logo.png" width="200" height="77" alt="Logo">
+      </div>
+      <ul class="footer__menu menu">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Our programs</a></li>
+        <li><a href="#">For families</a></li>
+        <li><a href="#">Enrolment</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="footer__middle">
+      <a href="https://goo.gl/maps/AuMcBYMQUJkTCiUdA" class="footer__address"><b>2-4 Kincumber Road,</b>  Harrington, NSW-2427</a>
+      <a class="footer__tel" href="tel:02 6556 1361">02 6556 1361</a>
+      <button class="button">Enrol now</button>
+    </div>
+    <p class="footer__copyright">©2020 seaurchinschildcare.com.au All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

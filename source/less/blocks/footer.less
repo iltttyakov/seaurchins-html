@@ -1,0 +1,149 @@
+.footer {
+  padding-top: 41px;
+  padding-bottom: 30px;
+
+  background-color: #e6f1f8;
+}
+
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__logo-container {
+  flex-shrink: 0;
+}
+
+.footer__middle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer__address {
+  margin: 0;
+  margin-top: -22px;
+
+  font-size: 20px;
+  line-height: 30px;
+  color: #03405c;
+  letter-spacing: -0.02em;
+
+  cursor: pointer;
+  transition: all 0.1s ease;
+
+  &:hover,
+  &:focus {
+    color: #00ad5d;
+  }
+}
+
+.footer__tel {
+  margin-left: auto;
+  margin-right: 59px;
+  margin-top: -20px;
+
+  font-size: 32px;
+  line-height: 34px;
+  font-weight: 500;
+  color: #03405c;
+  white-space: nowrap;
+
+  cursor: pointer;
+  transition: all 0.1s ease;
+
+  &:hover,
+  &:focus {
+    color: #00ad5d;
+  }
+}
+
+.footer__button {
+  margin-left: 15px;
+}
+
+.footer__copyright {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #03405c;
+  text-align: center;
+}
+
+.footer__menu {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  margin-right: -29px;
+
+  li:last-child {
+    margin-right: 29px;
+  }
+}
+
+@media (max-width: 1230px) {
+  .footer {
+    overflow: hidden;
+  }
+
+  .footer__top {
+    margin-bottom: 35px;
+  }
+
+  .footer__menu {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .footer__tel {
+    margin-right: 0;
+  }
+
+  .footer__button {
+    display: none;
+  }
+
+  .footer__middle {
+    margin-bottom: 55px;
+  }
+}
+
+@media (max-width: 763px) {
+  .footer__middle,
+  .footer__top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__logo-container {
+    margin-bottom: 13px;
+  }
+
+  .footer__tel {
+    margin: 0 auto;
+  }
+
+  .footer__address {
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    b {
+      display: block;
+    }
+  }
+
+  .footer__middle {
+    margin-bottom: 25px;
+  }
+
+  .footer__menu {
+    margin-right: 0;
+  }
+
+  .footer__copyright {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}

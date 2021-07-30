@@ -1,0 +1,294 @@
+.programs {
+  padding-top: 87px;
+  padding-bottom: 90px;
+}
+
+.programs__container {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/programs-bg.png");
+}
+
+.programs__title {
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.programs__offer {
+  margin: 0 auto;
+  margin-bottom: 16px;
+
+  font-size: 24px;
+  line-height: 34px;
+  text-align: center;
+  color: #03405c;
+}
+
+.programs__list {
+  margin: 0;
+  margin-bottom: 47px;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+
+  list-style: none;
+}
+
+.programs__pic-container {
+  margin-bottom: 2px;
+  width: 212px;
+  height: 158px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  transition: all 0.1s ease;
+}
+
+.programs__name {
+  margin: 0;
+  margin-bottom: 17px;
+
+  font-family: "Patrick Hand", sans-serif;
+  font-size: 40px;
+  line-height: 42px;
+  color: #14a0db;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #03405c;
+}
+
+.programs__age {
+  margin: 0;
+  margin-bottom: 4px;
+
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.programs__desc {
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #03405c;
+  text-align: center;
+}
+
+.programs__hours {
+  position: relative;
+
+  margin: 0 auto;
+  margin-bottom: 75px;
+  width: 770px;
+  padding: 34px 30px 33px 83px;
+
+  border: dotted 6px #3d0473;
+  border-radius: 10px 10px 10px 50px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    top: -6px;
+    left: -6px;
+
+    width: calc(100% + 11px);
+    height: calc(100% + 11px);
+
+    border: dashed 6px #f83647;
+    border-radius: 10px 10px 10px 50px;
+  }
+}
+
+.programs__hours-title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 32px;
+  line-height: 34px;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.025em;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    left: -140px;
+    top: -83px;
+
+    width: 141px;
+    height: 141px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../img/urchin.png");
+
+    transform: scaleX(-1);
+  }
+}
+
+.programs__hours-desc {
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 30px;
+  color: #03405c;
+}
+
+.programs__button {
+  margin: 0 auto;
+}
+
+.programs__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 330px;
+
+  cursor: pointer;
+
+  &:hover {
+    & .programs__pic-container {
+      transform: scale(1.05);
+    }
+  }
+
+  &--1 {
+    .programs__name {
+      color: #8ad0ef;
+    }
+
+    .programs__age {
+      color: #14a0db;
+    }
+  }
+
+  &--2 {
+    .programs__name {
+      color: #fbce5e;
+    }
+
+    .programs__age {
+      color: #ef991f;
+    }
+  }
+
+  &--3 {
+    .programs__name {
+      color: #cae057;
+    }
+
+    .programs__age {
+      color: #93ac13;
+    }
+  }
+}
+
+.programs__rooms {
+  margin-bottom: 100px;
+}
+
+.programs__link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1230px) {
+  .programs__hours-title {
+    &::before {
+      left: -100px;
+      top: -70px;
+
+      width: 96px;
+      height: 96px;
+    }
+  }
+
+  .programs__rooms {
+    margin-bottom: 8px;
+  }
+
+  .programs__list {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7px;
+  }
+
+  .programs__item {
+    width: 100%;
+    max-width: 560px;
+    margin-bottom: 36px;
+  }
+
+  .programs__hours {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1230px) {
+  .programs {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 763px) {
+  .programs {
+    padding-bottom: 70px;
+  }
+
+  .programs__item {
+    margin-bottom: 17px;
+  }
+
+  .programs__offer {
+    margin-bottom: 32px;
+  }
+
+  .programs__desc {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .programs__rooms {
+    margin-bottom: 40px;
+  }
+
+  .programs__hours {
+    margin-bottom: 49px;
+    padding: 10px 7px;
+
+    border-radius: 10px;
+
+    &::before {
+      border-radius: 10px;
+    }
+  }
+
+  .programs__hours-title {
+    &::before {
+      left: -60px;
+      top: -84px;
+    }
+  }
+
+  .programs__hours-desc {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}

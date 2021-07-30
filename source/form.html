@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SeaUrchins</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+<!--
+<div style="display:none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+-->
+
+<div class="first first--inner">
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__logo-container">
+        <img class="header__logo" src="img/logo.png" width="200" height="77" alt="Logo">
+      </div>
+      <div class="header__bee bee">
+        <img class="bee__pic" src="img/bee.gif" width="50" height="50" alt="Bee">
+      </div>
+      <ul class="header__menu menu">
+        <li class="menu-item-has-children">
+          <a href="#">About Us</a>
+          <ul class="sub-menu">
+            <li><a href="#">Our Philosophy</a></li>
+            <li><a href="#">Hours of operation/session</a></li>
+            <li><a href="#">Fee</a></li>
+            <li><a href="#">Location and parking</a></li>
+            <li><a href="#">Picture gallery</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Our programs</a></li>
+        <li><a href="#">For families</a></li>
+        <li><a href="#">Enrolment</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="usp usp--inner container">
+    <div class="usp__left">
+      <div class="usp__title-container">
+        <h1 class="usp__title title title--green">
+          Waiting List
+        </h1>
+        <img class="usp__start usp__start--1" src="img/star.png" width="19" height="25" alt="Start">
+        <img class="usp__start usp__start--2" src="img/star.png" width="19" height="25" alt="Start">
+        <img class="usp__start usp__start--3" src="img/star.png" width="19" height="25" alt="Start">
+        <img class="usp__start usp__start--4" src="img/star.png" width="19" height="25" alt="Start">
+      </div>
+    </div>
+    <div class="usp__right" id="usp__right">
+      <img class="usp__cloud usp__cloud--single usp__cloud--animation" data-id="1" id="usp__cloud--1" src="img/form-pic.png" width="761" height="551" alt="Kids">
+    </div>
+  </section>
+</div>
+
+<section class="request">
+  <div class="request__container container">
+    <p class="request__offer">
+      If you would like your child to be placed on our waiting list/or receive a copy of our enrolment form please complete the following details below and click submit.
+    </p>
+      <form class="request__form">
+
+        <label class="request__text-block">
+          <span class="request__label">Name ( Parent/ Guardian):</span>
+          <input class="request__input" type="text" required>
+        </label>
+        <label class="request__text-block">
+          <span class="request__label">Email:</span>
+          <input class="request__input" type="email" required>
+        </label>
+        <label class="request__text-block">
+          <span class="request__label">Contact phone number:</span>
+          <input class="request__input" type="tel" required>
+        </label>
+        <label class="request__text-block">
+          <span class="request__label">Child’s name:</span>
+          <input class="request__input" type="text" required>
+        </label>
+        <label class="request__text-block">
+          <span class="request__label">Child’s date of birth:</span>
+          <input class="request__input" type="date" required>
+        </label>
+        <label class="request__text-block">
+          <span class="request__label">Proposed Start Date:</span>
+          <input class="request__input" type="date" required>
+        </label>
+
+        <div class="request__form-block">
+          <p class="request__label">Are you flexible with Days?</p>
+          <div class="request__checkbox-group">
+            <input class="request__checkbox visually-hidden" type="radio" name="flexible" value="yes" id="flexible-yes">
+            <label class="request__checkbox-label" for="flexible-yes">Yes</label>
+          </div>
+          <div class="request__checkbox-group">
+            <input class="request__checkbox visually-hidden" type="radio" name="flexible" value="no" id="flexible-no">
+            <label class="request__checkbox-label" for="flexible-no">No</label>
+          </div>
+        </div>
+
+        <div class="request__form-block">
+          <p class="request__label">DAYS OF CARE REQUIRED: (Please choose)</p>
+          <ul class="request__days-list">
+            <li class="request__days-item">
+              <input class="request__checkbox visually-hidden" type="checkbox" value="Monday" id="Monday">
+              <label class="request__checkbox-label request__checkbox-label--column" for="Monday">Monday</label>
+            </li>
+            <li class="request__days-item">
+              <input class="request__checkbox visually-hidden" type="checkbox" value="Tuesday" id="Tuesday">
+              <label class="request__checkbox-label request__checkbox-label--column" for="Tuesday">Tuesday</label>
+            </li>
+            <li class="request__days-item">
+              <input class="request__checkbox visually-hidden" type="checkbox" value="Wednesday" id="Wednesday">
+              <label class="request__checkbox-label request__checkbox-label--column" for="Wednesday">Wednesday</label>
+            </li>
+            <li class="request__days-item">
+              <input class="request__checkbox visually-hidden" type="checkbox" value="Thursday" id="Thursday">
+              <label class="request__checkbox-label request__checkbox-label--column" for="Thursday">Thursday</label>
+            </li>
+            <li class="request__days-item">
+              <input class="request__checkbox visually-hidden" type="checkbox" value="Friday" id="Friday">
+              <label class="request__checkbox-label request__checkbox-label--column" for="Friday">Friday</label>
+            </li>
+          </ul>
+        </div>
+
+        <label class="request__text-block">
+          <span class="request__label">Comment (optional)</span>
+          <input class="request__input"  type="text">
+        </label>
+
+        <button type="submit" class="button request__submit">Submit Form</button>
+
+      </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__logo-container">
+        <img class="footer__logo" src="img/logo.png" width="200" height="77" alt="Logo">
+      </div>
+      <ul class="footer__menu menu">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Our programs</a></li>
+        <li><a href="#">For families</a></li>
+        <li><a href="#">Enrolment</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="footer__middle">
+      <a href="https://goo.gl/maps/AuMcBYMQUJkTCiUdA" class="footer__address"><b>2-4 Kincumber Road,</b>  Harrington, NSW-2427</a>
+      <a class="footer__tel" href="tel:02 6556 1361">02 6556 1361</a>
+      <button class="button">Enrol now</button>
+    </div>
+    <p class="footer__copyright">©2020 seaurchinschildcare.com.au All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

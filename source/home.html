@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SeaUrchins</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+<!--
+<div style="display:none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+-->
+
+<div class="visually-hidden">
+  <svg xmlns="http://www.w3.org/2000/svg" width="351.281" height="311.191" viewBox="0 0 351.281 311.191">
+    <clipPath id="teachers-photo-mask">
+      <path d="M601.041,784.416c96.864,0,134.156,62.835,134.156,147.66,0,29.876,6.585,55.256-26.593,81.344s-86.047,72.24-148.794,72.24c-36.381,0-119.134-33.83-142.156-46.88s-33.231-53.739-33.231-106.7c0-48.208,55.6-55.343,65.041-119.386S559.228,784.416,601.041,784.416Z" transform="translate(-384.438 -774.469)"/>
+    </clipPath>
+    <clipPath id="teachers-container-mask">
+      <path d="M603.2,1764.53c101.973,0,141.232,66.15,141.232,155.45,0,31.45,6.933,58.17-28,85.63s-90.585,76.05-156.642,76.05c-38.3,0-125.418-35.62-149.655-49.35s-34.984-56.58-34.984-112.33c0-50.76,58.535-58.27,68.472-125.69S559.183,1764.53,603.2,1764.53Z" transform="translate(-375.156 -1754.03)"/>
+  </svg>
+</div>
+
+<div class="first">
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__logo-container">
+        <img class="header__logo" src="img/logo.png" width="200" height="77" alt="Logo">
+      </div>
+      <div class="header__bee bee">
+        <img class="bee__pic" src="img/bee.gif" width="50" height="50" alt="Bee">
+      </div>
+      <ul class="header__menu menu">
+        <li class="menu-item-has-children">
+          <a href="#">About Us</a>
+          <ul class="sub-menu">
+            <li><a href="#">Our Philosophy</a></li>
+            <li><a href="#">Hours of operation/session</a></li>
+            <li><a href="#">Fee</a></li>
+            <li><a href="#">Location and parking</a></li>
+            <li><a href="#">Picture gallery</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Our programs</a></li>
+        <li><a href="#">For families</a></li>
+        <li><a href="#">Enrolment</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+      <button class="header__burger burger">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </div>
+  </header>
+  <section class="usp container">
+    <div class="usp__left">
+      <div class="usp__title-container">
+        <h1 class="usp__title title title--green">
+          <span class="usp__title--small">Sea Urchins</span>
+          Childcare Centre
+        </h1>
+        <img class="usp__start usp__start--1" src="img/star.png" width="19" height="25" alt="Start">
+        <img class="usp__start usp__start--2" src="img/star.png" width="19" height="25" alt="Start">
+        <img class="usp__start usp__start--3" src="img/star.png" width="19" height="25" alt="Start">
+        <img class="usp__start usp__start--4" src="img/star.png" width="19" height="25" alt="Start">
+      </div>
+      <p class="usp__offer">
+        With love and care in Harrington Waters
+      </p>
+      <button class="usp__button button">Enrol now</button>
+    </div>
+    <div class="usp__right" id="usp__right">
+      <img class="usp__cloud usp__cloud--1 usp__cloud--animation" data-id="1" id="usp__cloud--1"
+           src="img/kids-cloud-1.png" width="420" height="168" alt="Kids">
+      <img class="usp__cloud usp__cloud--2 usp__cloud--animation" data-id="2" id="usp__cloud--2"
+           src="img/kids-cloud-2.png" width="463" height="306" alt="Kids">
+      <img class="usp__cloud usp__cloud--3 usp__cloud--animation" data-id="3" id="usp__cloud--3"
+           src="img/kids-cloud-3.png" width="293" height="123" alt="Kids">
+    </div>
+  </section>
+</div>
+
+<section class="quote">
+  <div class="quote__bg">
+    <svg class="fish quote__fish" id="fish">
+      <path
+        id="fish2"
+        d="m 172.04828,20.913839 c 0.0489,-0.444179 -0.2178,-0.896934 -1.01784,-1.415715 -0.72801,-0.475049 -1.4826,-0.932948 -2.2149,-1.401138 -1.6035,-1.028129 -3.29018,-1.969653 -4.89798,-3.079244 -4.67074,-3.24131 -10.22127,-4.404923 -15.76322,-5.1509392 -2.27235,-0.286401 -4.81223,-0.168925 -6.72186,-1.574351 -1.48174,-1.081294 -4.04993,-4.828523 -6.86506,-6.456038 -0.4862,-0.290688 -2.77227,-1.44486897 -2.77227,-1.44486897 0,0 1.30939,3.55000597 1.60951,4.26429497 0.69542,1.644664 -0.38158,3.063809 -0.83262,4.642447 -0.29069,1.0418502 2.13772,0.8129002 2.26463,1.7827212 0.18179,1.432007 -4.15197,1.936211 -6.59152,2.417263 -3.65634,0.715146 -7.91635,2.082841 -11.56925,0.884071 -4.3046,-1.38313 -7.37269,-4.129669 -10.46566,-7.2354952 1.43801,6.7252892 5.4382,10.6028562 5.6157,11.4226162 0.18607,0.905509 -0.45961,1.091584 -1.04099,1.682394 -1.28967,1.265655 -6.91566,7.731125 -6.93366,9.781383 1.61379,-0.247815 3.56115,-1.660957 4.9803,-2.485862 1.58035,-0.905509 7.60593,-5.373029 9.29347,-6.065023 0.38587,-0.160351 5.0549,-1.531476 5.09434,-0.932949 0.0695,0.932949 -0.30784,1.137031 -0.18436,1.527189 0.22638,0.746016 1.44144,1.465449 2.02282,1.985088 1.50918,1.292237 3.21044,2.42841 4.27373,4.156252 1.49203,2.401827 1.55805,4.999163 1.98251,7.677102 0.99469,-0.111473 2.0091,-2.17545 2.55961,-2.992638 0.51278,-0.772598 2.38639,-4.07136 3.09725,-4.275442 0.67227,-0.204082 2.75511,0.958673 3.50284,1.180763 2.85973,0.848057 5.644,1.353976 8.56032,1.353976 3.50799,0.0094 12.726,0.258104 19.55505,-4.800226 0.75545,-0.567658 2.55703,-2.731104 2.55703,-2.731104 0,0 -0.37644,-0.577091 -1.04785,-0.790605 0.89779,-0.584808 1.8659,-1.211633 1.94993,-1.925922 z"
+        style="fill:#528484;fill-opacity:1"
+        inkscape:connector-curvature="0"
+        sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"/>
+      <path
+        sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"
+        inkscape:connector-curvature="0"
+        style="fill:#528484;fill-opacity:1"
+        d="m 234.99441,42.953992 c 0.0489,-0.44418 -0.2178,-0.896934 -1.01784,-1.415715 -0.72801,-0.47505 -1.4826,-0.932949 -2.2149,-1.401138 -1.6035,-1.02813 -3.29018,-1.969653 -4.89798,-3.079245 -4.67074,-3.24131 -10.22127,-4.404923 -15.76322,-5.150939 -2.27235,-0.286401 -4.81223,-0.168925 -6.72186,-1.574351 -1.48174,-1.081294 -4.04993,-4.828523 -6.86506,-6.456038 -0.4862,-0.290688 -2.77227,-1.444869 -2.77227,-1.444869 0,0 1.30939,3.550006 1.60951,4.264295 0.69542,1.644664 -0.38158,3.063809 -0.83262,4.642447 -0.29069,1.04185 2.13772,0.8129 2.26463,1.782721 0.18179,1.432007 -4.15197,1.936211 -6.59152,2.417263 -3.65634,0.715146 -7.91635,2.082842 -11.56925,0.884072 -4.3046,-1.383131 -7.37269,-4.12967 -10.46566,-7.235496 1.43801,6.725289 5.4382,10.602857 5.6157,11.422617 0.18607,0.905508 -0.45961,1.091583 -1.04099,1.682394 -1.28967,1.265654 -6.91566,7.731125 -6.93366,9.781382 1.61379,-0.247815 3.56115,-1.660957 4.9803,-2.485862 1.58035,-0.905509 7.60593,-5.373029 9.29347,-6.065023 0.38587,-0.160351 5.0549,-1.531476 5.09434,-0.932948 0.0695,0.932948 -0.30784,1.137031 -0.18436,1.527188 0.22638,0.746016 1.44144,1.46545 2.02282,1.985088 1.50918,1.292237 3.21044,2.42841 4.27373,4.156252 1.49203,2.401827 1.55805,4.999163 1.98251,7.677102 0.99469,-0.111473 2.0091,-2.17545 2.55961,-2.992638 0.51278,-0.772598 2.38639,-4.071359 3.09725,-4.275442 0.67227,-0.204082 2.75511,0.958673 3.50284,1.180763 2.85973,0.848057 5.644,1.353976 8.56032,1.353976 3.50799,0.0094 12.726,0.258104 19.55505,-4.800226 0.75545,-0.567658 2.55703,-2.731104 2.55703,-2.731104 0,0 -0.37644,-0.57709 -1.04785,-0.790605 0.89779,-0.584808 1.8659,-1.211633 1.94993,-1.925921 z"
+        id="fish3"/>
+      <path
+        id="fish6"
+        d="m 200.07076,80.737109 c 0.0489,-0.44418 -0.2178,-0.896934 -1.01784,-1.415715 -0.72801,-0.47505 -1.4826,-0.932949 -2.2149,-1.401138 -1.6035,-1.02813 -3.29018,-1.969653 -4.89798,-3.079245 -4.67074,-3.24131 -10.22127,-4.404923 -15.76322,-5.150939 -2.27235,-0.286401 -4.81223,-0.168925 -6.72186,-1.574351 -1.48174,-1.081294 -4.04993,-4.828523 -6.86506,-6.456038 -0.4862,-0.290688 -2.77227,-1.444869 -2.77227,-1.444869 0,0 1.30939,3.550006 1.60951,4.264295 0.69542,1.644664 -0.38158,3.063809 -0.83262,4.642447 -0.29069,1.04185 2.13772,0.8129 2.26463,1.782721 0.18179,1.432007 -4.15197,1.936211 -6.59152,2.417263 -3.65634,0.715146 -7.91635,2.082842 -11.56925,0.884072 -4.3046,-1.383131 -7.37269,-4.12967 -10.46566,-7.235496 1.43801,6.725289 5.4382,10.602857 5.6157,11.422617 0.18607,0.905508 -0.45961,1.091583 -1.04099,1.682394 -1.28967,1.265654 -6.91566,7.731125 -6.93366,9.781382 1.61379,-0.247815 3.56115,-1.660957 4.9803,-2.485862 1.58035,-0.905509 7.60593,-5.373029 9.29347,-6.065023 0.38587,-0.160351 5.0549,-1.531476 5.09434,-0.932948 0.0695,0.932948 -0.30784,1.137031 -0.18436,1.527188 0.22638,0.746016 1.44144,1.46545 2.02282,1.985088 1.50918,1.292237 3.21044,2.42841 4.27373,4.156252 1.49203,2.401827 1.55805,4.999163 1.98251,7.677102 0.99469,-0.111473 2.0091,-2.17545 2.55961,-2.992638 0.51278,-0.772598 2.38639,-4.071359 3.09725,-4.275442 0.67227,-0.204082 2.75511,0.958673 3.50284,1.180763 2.85973,0.848057 5.644,1.353976 8.56032,1.353976 3.50799,0.0094 12.726,0.258104 19.55505,-4.800226 0.75545,-0.567658 2.55703,-2.731104 2.55703,-2.731104 0,0 -0.37644,-0.57709 -1.04785,-0.790605 0.89779,-0.584808 1.8659,-1.211633 1.94993,-1.925921 z"
+        style="fill:#528484;fill-opacity:1"
+        inkscape:connector-curvature="0"
+        sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"/>
+      <path
+        sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"
+        inkscape:connector-curvature="0"
+        style="fill:#528484;fill-opacity:1"
+        d="m 77.275623,89.018799 c 0.0489,-0.44418 -0.2178,-0.896934 -1.01784,-1.415715 -0.72801,-0.47505 -1.4826,-0.932949 -2.2149,-1.401138 -1.6035,-1.02813 -3.29018,-1.969653 -4.89798,-3.079245 -4.67074,-3.24131 -10.22127,-4.404923 -15.76322,-5.150939 -2.272347,-0.286401 -4.812227,-0.168925 -6.721857,-1.574351 -1.48174,-1.081294 -4.04993,-4.828523 -6.86506,-6.456038 -0.4862,-0.290688 -2.77227,-1.444869 -2.77227,-1.444869 0,0 1.30939,3.550006 1.60951,4.264295 0.69542,1.644664 -0.38158,3.063809 -0.83262,4.642447 -0.29069,1.04185 2.13772,0.8129 2.26463,1.782721 0.18179,1.432007 -4.15197,1.936211 -6.59152,2.417263 -3.65634,0.715146 -7.91635,2.082842 -11.56925,0.884072 -4.3046,-1.383131 -7.37269,-4.12967 -10.46566,-7.235496 1.43801,6.725289 5.4382,10.602857 5.6157,11.422617 0.18607,0.905508 -0.45961,1.091583 -1.04099,1.682394 -1.28967,1.265654 -6.9156603,7.731122 -6.9336603,9.781382 1.6137903,-0.24782 3.5611503,-1.66096 4.9803003,-2.48586 1.58035,-0.90551 7.60593,-5.37303 9.29347,-6.065025 0.38587,-0.160351 5.0549,-1.531476 5.09434,-0.932948 0.0695,0.932948 -0.30784,1.137031 -0.18436,1.527183 0.22638,0.74602 1.44144,1.46546 2.02282,1.98509 1.50918,1.29224 3.21044,2.42841 4.27373,4.15625 1.49203,2.40183 1.55805,4.999171 1.98251,7.677111 0.99469,-0.11148 2.0091,-2.17545 2.55961,-2.99264 0.51278,-0.7726 2.38639,-4.071361 3.09725,-4.275441 0.67227,-0.20408 2.75511,0.95867 3.50284,1.18076 2.85973,0.84806 5.644,1.35398 8.560317,1.35398 3.50799,0.009 12.726,0.2581 19.55505,-4.80023 0.75545,-0.56766 2.55703,-2.7311 2.55703,-2.7311 0,0 -0.37644,-0.57709 -1.04785,-0.79061 0.89779,-0.58481 1.8659,-1.211632 1.94993,-1.92592 z"
+        id="fish4"/>
+      <path
+        id="fish5"
+        d="m 127.65312,60.900973 c 0.0489,-0.44418 -0.2178,-0.896934 -1.01784,-1.415715 -0.72801,-0.47505 -1.4826,-0.932949 -2.2149,-1.401138 -1.6035,-1.02813 -3.29018,-1.969653 -4.89799,-3.079245 -4.67074,-3.24131 -10.22127,-4.404923 -15.76322,-5.150939 -2.27235,-0.286401 -4.812228,-0.168925 -6.721858,-1.574351 -1.48174,-1.081294 -4.04993,-4.828523 -6.86506,-6.456038 -0.4862,-0.290688 -2.77227,-1.444869 -2.77227,-1.444869 0,0 1.30939,3.550006 1.60951,4.264295 0.69542,1.644664 -0.38158,3.063809 -0.83262,4.642447 -0.29069,1.04185 2.13772,0.8129 2.26463,1.782721 0.18179,1.432007 -4.15197,1.936211 -6.59152,2.417263 -3.65634,0.715146 -7.91635,2.082842 -11.56925,0.884072 -4.3046,-1.383131 -7.37269,-4.12967 -10.46566,-7.235496 1.43801,6.725289 5.4382,10.602857 5.6157,11.422617 0.18607,0.905508 -0.45961,1.091583 -1.04099,1.682394 -1.28967,1.265654 -6.91566,7.731125 -6.93366,9.781382 1.61379,-0.247815 3.56115,-1.660957 4.9803,-2.485862 1.58035,-0.905509 7.60593,-5.373029 9.29347,-6.065023 0.38587,-0.160351 5.0549,-1.531476 5.09434,-0.932948 0.0695,0.932948 -0.30784,1.137031 -0.18436,1.527188 0.22638,0.746016 1.44144,1.46545 2.02282,1.985088 1.50918,1.292237 3.21044,2.42841 4.27373,4.156252 1.49203,2.401827 1.55805,4.999163 1.98251,7.677102 0.99469,-0.111473 2.0091,-2.17545 2.55961,-2.992638 0.51278,-0.772598 2.38639,-4.071359 3.09725,-4.275442 0.67227,-0.204082 2.75511,0.958673 3.50284,1.180763 2.85973,0.848057 5.643998,1.353976 8.560318,1.353976 3.50799,0.0094 12.726,0.258104 19.55506,-4.800226 0.75545,-0.567658 2.55703,-2.731104 2.55703,-2.731104 0,0 -0.37644,-0.57709 -1.04785,-0.790605 0.89779,-0.584808 1.8659,-1.211633 1.94993,-1.925921 z"
+        style="fill:#528484;fill-opacity:1"
+        inkscape:connector-curvature="0"
+        sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"/>
+      <path
+        d="m 68.19699,20.522295 c 0.0489,-0.44418 -0.2178,-0.896934 -1.01784,-1.415715 -0.72801,-0.47505 -1.4826,-0.932949 -2.2149,-1.401138 -1.6035,-1.02813 -3.29018,-1.969653 -4.89798,-3.079245 C 55.39553,11.384887 49.845,10.221274 44.30305,9.4752582 42.0307,9.1888572 39.49082,9.3063332 37.58119,7.900907 36.09945,6.819613 33.53126,3.072384 30.71613,1.444869 30.22993,1.154181 27.94386,0 27.94386,0 c 0,0 1.30939,3.550006 1.60951,4.264295 0.69542,1.644664 -0.38158,3.063809 -0.83262,4.642447 -0.29069,1.0418502 2.13772,0.8129002 2.26463,1.782721 0.18179,1.432007 -4.15197,1.936211 -6.59152,2.417263 -3.65634,0.715146 -7.91635,2.082842 -11.56925,0.884072 C 8.52001,12.607667 5.45192,9.8611282 2.35895,6.755302 3.79696,13.480591 7.79715,17.358159 7.97465,18.177919 8.16072,19.083427 7.51504,19.269502 6.93366,19.860313 5.64399,21.125967 0.018,27.591438 0,29.641695 1.61379,29.39388 3.56115,27.980738 4.9803,27.155833 c 1.58035,-0.905509 7.60593,-5.373029 9.29347,-6.065023 0.38587,-0.160351 5.0549,-1.531476 5.09434,-0.932948 0.0695,0.932948 -0.30784,1.137031 -0.18436,1.527188 0.22638,0.746016 1.44144,1.46545 2.02282,1.985088 1.50918,1.292237 3.21044,2.42841 4.27373,4.156252 1.49203,2.401827 1.55805,4.999163 1.98251,7.677102 0.99469,-0.111473 2.0091,-2.17545 2.55961,-2.992638 0.51278,-0.772598 2.38639,-4.071359 3.09725,-4.275442 0.67227,-0.204082 2.75511,0.958673 3.50284,1.180763 2.85973,0.848057 5.644,1.353976 8.56032,1.353976 3.50799,0.0094 12.726,0.258104 19.55505,-4.800226 0.75545,-0.567658 2.55703,-2.731104 2.55703,-2.731104 0,0 -0.37644,-0.57709 -1.04785,-0.790605 0.89779,-0.584808 1.8659,-1.211633 1.94993,-1.925921 z"
+        id="fish1"/>
+    </svg>
+  </div>
+  <div class="quote__container container">
+    <h2 class="quote__title">‘Play is the highest form of research.’</h2>
+    <p class="quote__author">Albert Einstein</p>
+  </div>
+</section>
+
+<section class="advantages">
+  <div class="advantages__container container">
+    <h2 class="advantages__title title title--green">
+      <span class="title--blue">Happy</span> Children - <span class="title--blue">Happy</span> Parents
+    </h2>
+    <ul class="advantages__list">
+      <li class="advantages__item">
+        <div class="advantages__pic-container">
+          <img class="advantages__pic" src="img/advantages-1.png" width="160" height="180" alt="">
+        </div>
+        <h3 class="advantages__name">
+          Quick adaptation
+        </h3>
+        <p class="advantages__desc">
+          Our vision is to develop a centre that has happy and resilient children who find learning fun. A space that
+          they can call their own as they will have a strong sense of belonging
+        </p>
+      </li>
+      <li class="advantages__item">
+        <div class="advantages__pic-container">
+          <img class="advantages__pic" src="img/advantages-2.png" width="201" height="180" alt="">
+        </div>
+        <h3 class="advantages__name">
+          Open yourself
+        </h3>
+        <p class="advantages__desc">
+          Our children are creative who have the time, the right environment and the support to develop their talents
+          and pursue their interests; being confident and having a strong sense of identity
+        </p>
+      </li>
+      <li class="advantages__item">
+        <div class="advantages__pic-container">
+          <img class="advantages__pic" src="img/advantages-3.png" width="192" height="192" alt="">
+        </div>
+        <h3 class="advantages__name">
+          Fun learning
+        </h3>
+        <p class="advantages__desc">
+          A Centre that focuses on fun learning through music and art and all areas of STEAM: science , technology
+          ,literacy and numeracy. Play activities at Sea Urchins help children develop their social and emotional
+          skills.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="about">
+  <div class="about__container container">
+    <img class="about__pictures" src="img/ship.png" width="268" height="119" alt="Ship">
+    <h2 class="about__title title title--green">Our Centre</h2>
+    <div class="about__content">
+      <div class="about__img-container">
+        <img class="about__img" src="img/about-img.png" width="737" height="665" alt="Oue centre">
+      </div>
+      <div class="about__right">
+        <img class="about__urchin" id="about__urchin" src="img/urchin.png" width="141" height="141" alt="Urchin">
+        <p>
+          Sea Urchins Childcare Centre is a Long Day Care situated in Harrington Waters, a development on the Mid-North
+          Coast of New South Wales set in an idyllic location amongst National Parks and beautiful beaches and the
+          magnificent Manning River. It is bounded by Crowdy Bay National Park, the township of Harrington and the
+          glittering shore of the Pacific Ocean.
+        </p>
+        <p>
+          This centre has catered to the needs of the Harrington community for some time and came under the present
+          ownership on 3rd September, 2018.
+        </p>
+        <a href="#" class="about__button button">Read more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="philosophy">
+  <div class="philosophy__container container">
+    <h2 class="philosophy__title title title--green">Our Philosophy</h2>
+    <div class="philosophy__content">
+      <div class="philosophy__tree"></div>
+      <div class="philosophy__column philosophy__column--left">
+        <p class="philosophy__paragraph philosophy__paragraph--1"><b>We believe</b> in a culture of listening to the
+          child, acknowledging their beliefs and thoughts, thereby developing their self-esteem and a belief in
+          themselves and their abilities.</p>
+        <p class="philosophy__paragraph philosophy__paragraph--2"><b>We value</b> the knowledge that families bring in
+          about their child and we work in partnership with them to achieve the best outcomes for children.</p>
+        <p class="philosophy__paragraph philosophy__paragraph--3"><b>We value</b> and respect the history, culture and
+          traditions of the Aboriginal and Torres Strait Islanders.</p>
+        <p class="philosophy__paragraph philosophy__paragraph--4"><b>We believe</b> in capacity building, consistency of
+          core beliefs across the centre, and sharing of knowledge, skills and ideas.</p>
+        <p class="philosophy__paragraph philosophy__paragraph--5"><b>We believe</b> that children’s innate curiosity and
+          the subsequent questioning should be encouraged as inquiry leads to in-depth knowledge building.</p>
+      </div>
+      <div class="philosophy__column philosophy__column--right">
+        <p class="philosophy__paragraph philosophy__paragraph--6"><b>We believe</b> that happy children learn better and
+          we strive to provide the environment where children can feel safe and secure.</p>
+        <p class="philosophy__paragraph philosophy__paragraph--7"><b>We embed</b> sustainable practices by encouraging
+          children to respect and care for all living things and the environment</p>
+        <p class="philosophy__paragraph philosophy__paragraph--8"><b>We believe</b> that the child is curious and is
+          ‘strong, capable and resilient’ and we provide a challenging environment and the provocations to guide the
+          children’s interest and to engage them in their learning. </p>
+      </div>
+    </div>
+    <p class="philosophy__bottom">
+      We follow the Early Years Learning Framework (EYLF) with its beliefs about children and how they learn flourishing
+      under the umbrella of the concepts of ‘Being, belonging and becoming’. We have high expectations from our children
+      and aim to encourage dispositions that promote learning such as: curiosity, cooperation, creativity, persistence,
+      enthusiasm and reflexivity.
+    </p>
+  </div>
+</section>
+
+<section class="programs">
+  <div class="programs__container container">
+    <h2 class="programs__title title title--green">Our Programs</h2>
+    <p class="programs__offer">Sea Urchins Childcare Centre is licensed for 44 children and has three rooms.</p>
+    <ul class="programs__list">
+      <li class="programs__item programs__item--1">
+        <div class="programs__pic-container">
+          <img class="programs__pic" src="img/programs-1.png" width="165" height="158" alt="JELLYFISH">
+        </div>
+        <h3 class="programs__name">JELLYFISH</h3>
+        <p class="programs__age">0 to 2 year old room, Ratio 1:4</p>
+        <p class="programs__desc">
+          Our educators build strong and trusting relationships with the babies following their interests and needs
+          whilst providing them opportunities to explore their...
+        </p>
+      </li>
+      <li class="programs__item programs__item--2">
+        <div class="programs__pic-container">
+          <img class="programs__pic" src="img/programs-2.png" width="151" height="142" alt="STARFISH">
+        </div>
+        <h3 class="programs__name">STARFISH</h3>
+        <p class="programs__age">2-3 year old room, Ratio 1:5</p>
+        <p class="programs__desc">
+          Our educators help your children develop their growing sense of independence and they are
+          encouraged to express themselves by developing their...
+        </p>
+      </li>
+      <li class="programs__item programs__item--3">
+        <div class="programs__pic-container">
+          <img class="programs__pic" src="img/programs-3.png" width="212" height="155" alt="WHALES">
+        </div>
+        <h3 class="programs__name">WHALES</h3>
+        <p class="programs__age">3-5 year room, Ratio 1:10</p>
+        <p class="programs__desc">
+          Our educators help your children develop their growing sense of independence and they are
+          encouraged to express themselves by developing their...
+        </p>
+      </li>
+    </ul>
+
+    <section class="programs__rooms rooms">
+      <h2 class="rooms__title">Kids Time</h2>
+      <form class="rooms__switch">
+        <div class="rooms__item">
+          <input class="rooms__checkbox visually-hidden" type="radio" name="room" value="JELLYFISH" id="rooms-JELLYFISH" checked>
+          <label class="rooms__button rooms__button--1" for="rooms-JELLYFISH">JELLYFISH</label>
+        </div>
+        <div class="rooms__item">
+          <input class="rooms__checkbox visually-hidden" type="radio" name="room" value="STARFISH" id="rooms-STARFISH">
+          <label class="rooms__button rooms__button--2" for="rooms-STARFISH">STARFISH</label>
+        </div>
+        <div class="rooms__item">
+          <input class="rooms__checkbox visually-hidden" type="radio" name="room" value="WHALES" id="rooms-WHALES">
+          <label class="rooms__button rooms__button--3" for="rooms-WHALES">WHALES</label>
+        </div>
+      </form>
+
+      <div class="rooms__slider" id="rooms__slider--JELLYFISH">
+
+        <div class="rooms__wrapper">
+          <img class="" src="img/rooms-pic.jpg" width="560" height="402">
+        </div>
+
+        <div class="rooms__wrapper">
+          <img class="" src="img/rooms-pic.jpg" width="560" height="402">
+        </div>
+
+        <div class="rooms__wrapper">
+          <img class="" src="img/rooms-pic.jpg" width="560" height="402">
+        </div>
+
+        <div class="rooms__wrapper">
+          <img class="" src="img/rooms-pic.jpg" width="560" height="402">
+        </div>
+
+      </div>
+      <div class="rooms__slider visually-hidden" id="rooms__slider--STARFISH">
+
+        <div class="rooms__wrapper">
+          <img class="" src="img/rooms-pic.jpg" width="560" height="402">
+        </div>
+
+        <div class="rooms__wrapper">
+          <img class="" src="img/rooms-pic.jpg" width="560" height="402">
+        </div>
+
+        <div class="rooms__wrapper">
+          <img class="" src="img/rooms-pic.jpg" width="560" height="402">
+        </div>
+
+        <div class="rooms__wrapper">
+          <img class="" src="img/rooms-pic.jpg" width="560" height="402">
+        </div>
+
+      </div>
+      <div class="rooms__slider visually-hidden" id="rooms__slider--WHALES">
+
+        <div class="rooms__wrapper">
+          <img class="" src="img/rooms-pic.jpg" width="560" height="402">
+        </div>
+
+        <div class="rooms__wrapper">
+          <img class="" src="img/rooms-pic.jpg" width="560" height="402">
+        </div>
+
+        <div class="rooms__wrapper">
+          <img class="" src="img/rooms-pic.jpg" width="560" height="402">
+        </div>
+
+        <div class="rooms__wrapper">
+          <img class="" src="img/rooms-pic.jpg" width="560" height="402">
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="programs__hours">
+      <h3 class="programs__hours-title title title--green">HOURS OF OPERATION</h3>
+      <p class="programs__hours-desc">
+        <b>Sea Urchins Childcare Centre</b> is open <b>from 7.30am to 5.30 pm.</b>
+        The centre is open <b>for 50 wks of the year</b>, closing for two weeks over the Christmas and New Year Period.
+      </p>
+    </div>
+    <a href="#" class="programs__button button">Enrol now</a>
+  </div>
+</section>
+
+<section class="info">
+  <div class="info__container info__has-flower info__has-flower--1 container">
+    <h2 class="info__title title title--white">Information for Families</h2>
+    <p class="info__offer info__has-flower info__has-flower--2">
+      The following information is to help parents and carers to understand more about early childhood education and
+      care and provides links to important resources.
+    </p>
+    <div class="info__list">
+      <a class="info__item info__item--orange">
+        <b>Australian Children’s Education and Care Quality Authority(ACECQA)</b> is a national body that assists State
+        governments in implementing the National Quality Framework (NQF) for children’s education and care.
+      </a>
+      <a href="https://www.acecqa.gov.au/national-quality-framework"
+         class="info__item info__item--blue info__has-flower info__has-flower--3">
+        <b>The National Quality Framework (NQF)</b> provides a national approach to regulation, assessment and quality
+        improvement for early childhood education and care.
+      </a>
+      <a href="https://www.acecqa.gov.au/nqf/national-law-regulations/national-law"
+         class="info__item info__item--green info__has-flower info__has-flower--4">
+        The National Quality Framework(NQF) operates under <b>the Education and Care Services National Law</b> and <b>the
+        National Regulations.</b>
+      </a>
+
+      <a href="https://www.startingblocks.gov.au/" class="info__item info__item--orange">
+        <b>Starting Blocks</b> provides parents with information about early childhood education and care.
+      </a>
+      <a href="https://raisingchildren.net.au/about-us" class="info__item info__item--blue">
+        <b>Raising Children network</b> is a Government funded website reviewed by experts with free, up-to-date
+        information for young parents.
+      </a>
+      <a class="info__item info__item--green">
+        <b>Regulatory Authority:</b> NSW Early Childhood Education and Care Directorate Department of Education and
+        Communities.
+      </a>
+
+      <a class="info__item info__item--brown info__has-flower info__has-flower--5">
+        <b>Sea Urchins Childcare – Centre Policies</b> (access restricted to parents and carers)
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="contribution">
+  <div class="contribution__container container">
+    <h2 class="contribution__title title title--green">Creating Our Community’s Future</h2>
+    <p class="contribution__offer">The dispositions and attributes that we endeavour to develop in our children so that
+      they can be confident learners who are socially competent and emotionally strong.</p>
+    <div class="contribution__content">
+      <div class="contribution__left">
+        <h3 class="contribution__list-title">UNDER THE EYLF CONCEPT OF BELONGING</h3>
+        <ul class="contribution__list">
+          <li class="contribution__item">
+            Respectful,
+          </li>
+          <li class="contribution__item">
+            Cooperative,
+          </li>
+          <li class="contribution__item">
+            Caring,
+          </li>
+          <li class="contribution__item">
+            Inclusive,
+          </li>
+          <li class="contribution__item">
+            Empathetic.
+          </li>
+        </ul>
+        <h3 class="contribution__list-title">UNDER THE EYLF CONCEPT OF BEING</h3>
+        <ul class="contribution__list">
+          <li class="contribution__item">
+            Confident,
+          </li>
+          <li class="contribution__item">
+            Curious,
+          </li>
+          <li class="contribution__item">
+            Enthusiastic,
+          </li>
+          <li class="contribution__item">
+            Independent,
+          </li>
+          <li class="contribution__item">
+            Appreciative,
+          </li>
+          <li class="contribution__item">
+            Creative.
+          </li>
+        </ul>
+        <h3 class="contribution__list-title">UNDER THE EYLF CONCEPT OF BECOMING</h3>
+        <ul class="contribution__list">
+          <li class="contribution__item">
+            Knowledgeable,
+          </li>
+          <li class="contribution__item">
+            Communicators,
+          </li>
+          <li class="contribution__item">
+            Principled,
+          </li>
+          <li class="contribution__item">
+            Resilient,
+          </li>
+          <li class="contribution__item">
+            Responsible,
+          </li>
+          <li class="contribution__item">
+            Reflective.
+          </li>
+        </ul>
+      </div>
+      <div class="contribution__img-container">
+        <div class="contribution__control-container">
+          <button class="contribution__slide-control contribution__slide-control--prev">←</button>
+          <button class="contribution__slide-control contribution__slide-control--next">→</button>
+        </div>
+        <img class="contribution__img" src="img/contribution-img.png" width="868" height="885" alt="Contribution">
+        <div class="contribution__slider">
+          <img class="contribution__slider-pic" src="img/contribution__slider-1.jpg" width="453" height="604" alt="">
+          <img class="contribution__slider-pic contribution__slider-pic--active" src="img/contribution__slider-2.jpg"
+               width="486" height="648" alt="">
+          <img class="contribution__slider-pic" src="img/contribution__slider-3.jpg" width="805" height="604" alt="">
+          <img class="contribution__slider-pic" src="img/contribution__slider-4.jpg" width="520" height="693" alt="">
+          <img class="contribution__slider-pic" src="img/contribution__slider-5.jpg" width="453" height="604" alt="">
+          <img class="contribution__slider-pic" src="img/contribution__slider-6.jpg" width="453" height="604" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team">
+
+  <div class="team__container container">
+    <h2 class="team__title title title--green">Our wonderful team</h2>
+    <div class="team__slider">
+
+      <div class="team__wrapper">
+        <div class="team__item team__item--blue">
+          <div class="team__photo-container">
+            <img class="team__photo" src="img/teachers-1.jpg" width="370" height="328" alt="Abha Pathak">
+          </div>
+          <div class="team__bottom">
+            <h3 class="team__name">Abha Pathak</h3>
+            <p class="team__position">Director of Sea Urchins</p>
+          </div>
+          <div class="team__text-block team__text-block--blue">
+            <div class="team__scroll-block">
+              <p>Abha is the Nominated Supervisor and the Director of our Centre. She has a Master of Education,
+                Bachelor of Education and a Graduate Certificate in Education (Early Childhood Leadership).</p>
+              <p>Abha has been working with little children for over 40 years. Before moving to beautiful Harrington she
+                worked as the Director and Assistant Director at a large preschool in Canberra.</p>
+              <p>She loves the natural curiosity and creativity in children and wants to develop it further. Besides
+                literacy and numeracy Abha would also like the children to be engaged further in the arts and music and
+                she is currently working towards enhancing the existing program at Sea Urchins.</p>
+              <p>She is keenly interested in how a child’s brain develops in early childhood and wants to make learning
+                ‘fun’. She understands the importance of teaching children social emotional skills and how positive
+                interact</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team__wrapper">
+        <div class="team__item team__item--green">
+          <div class="team__photo-container">
+            <img class="team__photo" src="img/teachers-1.jpg" width="370" height="328" alt="Abha Pathak">
+          </div>
+          <div class="team__bottom">
+            <h3 class="team__name">Abha Pathak</h3>
+            <p class="team__position">Director of Sea Urchins</p>
+          </div>
+          <div class="team__text-block team__text-block--blue">
+            <div class="team__scroll-block">
+              <p>Abha is the Nominated Supervisor and the Director of our Centre. She has a Master of Education,
+                Bachelor of Education and a Graduate Certificate in Education (Early Childhood Leadership).</p>
+              <p>Abha has been working with little children for over 40 years. Before moving to beautiful Harrington she
+                worked as the Director and Assistant Director at a large preschool in Canberra.</p>
+              <p>She loves the natural curiosity and creativity in children and wants to develop it further. Besides
+                literacy and numeracy Abha would also like the children to be engaged further in the arts and music and
+                she is currently working towards enhancing the existing program at Sea Urchins.</p>
+              <p>She is keenly interested in how a child’s brain develops in early childhood and wants to make learning
+                ‘fun’. She understands the importance of teaching children social emotional skills and how positive
+                interact</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team__wrapper">
+        <div class="team__item team__item--orange">
+          <div class="team__photo-container">
+            <img class="team__photo" src="img/teachers-1.jpg" width="370" height="328" alt="Abha Pathak">
+          </div>
+          <div class="team__bottom">
+            <h3 class="team__name">Abha Pathak</h3>
+            <p class="team__position">Director of Sea Urchins</p>
+          </div>
+          <div class="team__text-block team__text-block--blue">
+            <div class="team__scroll-block">
+              <p>Abha is the Nominated Supervisor and the Director of our Centre. She has a Master of Education,
+                Bachelor of Education and a Graduate Certificate in Education (Early Childhood Leadership).</p>
+              <p>Abha has been working with little children for over 40 years. Before moving to beautiful Harrington she
+                worked as the Director and Assistant Director at a large preschool in Canberra.</p>
+              <p>She loves the natural curiosity and creativity in children and wants to develop it further. Besides
+                literacy and numeracy Abha would also like the children to be engaged further in the arts and music and
+                she is currently working towards enhancing the existing program at Sea Urchins.</p>
+              <p>She is keenly interested in how a child’s brain develops in early childhood and wants to make learning
+                ‘fun’. She understands the importance of teaching children social emotional skills and how positive
+                interact</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team__wrapper">
+        <div class="team__item team__item--blue">
+          <div class="team__photo-container">
+            <img class="team__photo" src="img/teachers-1.jpg" width="370" height="328" alt="Abha Pathak">
+          </div>
+          <div class="team__bottom">
+            <h3 class="team__name">Abha Pathak</h3>
+            <p class="team__position">Director of Sea Urchins</p>
+          </div>
+          <div class="team__text-block team__text-block--blue">
+            <div class="team__scroll-block">
+              <p>Abha is the Nominated Supervisor and the Director of our Centre. She has a Master of Education,
+                Bachelor of Education and a Graduate Certificate in Education (Early Childhood Leadership).</p>
+              <p>Abha has been working with little children for over 40 years. Before moving to beautiful Harrington she
+                worked as the Director and Assistant Director at a large preschool in Canberra.</p>
+              <p>She loves the natural curiosity and creativity in children and wants to develop it further. Besides
+                literacy and numeracy Abha would also like the children to be engaged further in the arts and music and
+                she is currently working towards enhancing the existing program at Sea Urchins.</p>
+              <p>She is keenly interested in how a child’s brain develops in early childhood and wants to make learning
+                ‘fun’. She understands the importance of teaching children social emotional skills and how positive
+                interact</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team__wrapper">
+        <div class="team__item team__item--green">
+          <div class="team__photo-container">
+            <img class="team__photo" src="img/teachers-1.jpg" width="370" height="328" alt="Abha Pathak">
+          </div>
+          <div class="team__bottom">
+            <h3 class="team__name">Abha Pathak</h3>
+            <p class="team__position">Director of Sea Urchins</p>
+          </div>
+          <div class="team__text-block team__text-block--blue">
+            <div class="team__scroll-block">
+              <p>Abha is the Nominated Supervisor and the Director of our Centre. She has a Master of Education,
+                Bachelor of Education and a Graduate Certificate in Education (Early Childhood Leadership).</p>
+              <p>Abha has been working with little children for over 40 years. Before moving to beautiful Harrington she
+                worked as the Director and Assistant Director at a large preschool in Canberra.</p>
+              <p>She loves the natural curiosity and creativity in children and wants to develop it further. Besides
+                literacy and numeracy Abha would also like the children to be engaged further in the arts and music and
+                she is currently working towards enhancing the existing program at Sea Urchins.</p>
+              <p>She is keenly interested in how a child’s brain develops in early childhood and wants to make learning
+                ‘fun’. She understands the importance of teaching children social emotional skills and how positive
+                interact</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team__wrapper">
+        <div class="team__item team__item--orange">
+          <div class="team__photo-container">
+            <img class="team__photo" src="img/teachers-1.jpg" width="370" height="328" alt="Abha Pathak">
+          </div>
+          <div class="team__bottom">
+            <h3 class="team__name">Abha Pathak</h3>
+            <p class="team__position">Director of Sea Urchins</p>
+          </div>
+          <div class="team__text-block team__text-block--blue">
+            <div class="team__scroll-block">
+              <p>Abha is the Nominated Supervisor and the Director of our Centre. She has a Master of Education,
+                Bachelor of Education and a Graduate Certificate in Education (Early Childhood Leadership).</p>
+              <p>Abha has been working with little children for over 40 years. Before moving to beautiful Harrington she
+                worked as the Director and Assistant Director at a large preschool in Canberra.</p>
+              <p>She loves the natural curiosity and creativity in children and wants to develop it further. Besides
+                literacy and numeracy Abha would also like the children to be engaged further in the arts and music and
+                she is currently working towards enhancing the existing program at Sea Urchins.</p>
+              <p>She is keenly interested in how a child’s brain develops in early childhood and wants to make learning
+                ‘fun’. She understands the importance of teaching children social emotional skills and how positive
+                interact</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="callback">
+  <h2 class="callback__title title title--lightblue">Contact us</h2>
+  <div class="callback__bg">
+    <div class="callback__form form container">
+      <form>
+        <div class="form__group">
+          <input type="text" id="customer-name">
+          <label for="customer-name">Your name*</label>
+        </div>
+        <div class="form__group">
+          <input type="email" id="customer-email">
+          <label for="customer-email">Your e-mail*</label>
+        </div>
+        <div class="form__group">
+          <textarea id="customer-message"></textarea>
+          <label for="customer-message">Your message*</label>
+        </div>
+        <input type="submit" value="Send your message!">
+      </form>
+    </div>
+  </div>
+
+  <div class="callback__fish">
+    <svg class="fish" id="fish">
+      <path
+        id="fish2"
+        d="m 172.04828,20.913839 c 0.0489,-0.444179 -0.2178,-0.896934 -1.01784,-1.415715 -0.72801,-0.475049 -1.4826,-0.932948 -2.2149,-1.401138 -1.6035,-1.028129 -3.29018,-1.969653 -4.89798,-3.079244 -4.67074,-3.24131 -10.22127,-4.404923 -15.76322,-5.1509392 -2.27235,-0.286401 -4.81223,-0.168925 -6.72186,-1.574351 -1.48174,-1.081294 -4.04993,-4.828523 -6.86506,-6.456038 -0.4862,-0.290688 -2.77227,-1.44486897 -2.77227,-1.44486897 0,0 1.30939,3.55000597 1.60951,4.26429497 0.69542,1.644664 -0.38158,3.063809 -0.83262,4.642447 -0.29069,1.0418502 2.13772,0.8129002 2.26463,1.7827212 0.18179,1.432007 -4.15197,1.936211 -6.59152,2.417263 -3.65634,0.715146 -7.91635,2.082841 -11.56925,0.884071 -4.3046,-1.38313 -7.37269,-4.129669 -10.46566,-7.2354952 1.43801,6.7252892 5.4382,10.6028562 5.6157,11.4226162 0.18607,0.905509 -0.45961,1.091584 -1.04099,1.682394 -1.28967,1.265655 -6.91566,7.731125 -6.93366,9.781383 1.61379,-0.247815 3.56115,-1.660957 4.9803,-2.485862 1.58035,-0.905509 7.60593,-5.373029 9.29347,-6.065023 0.38587,-0.160351 5.0549,-1.531476 5.09434,-0.932949 0.0695,0.932949 -0.30784,1.137031 -0.18436,1.527189 0.22638,0.746016 1.44144,1.465449 2.02282,1.985088 1.50918,1.292237 3.21044,2.42841 4.27373,4.156252 1.49203,2.401827 1.55805,4.999163 1.98251,7.677102 0.99469,-0.111473 2.0091,-2.17545 2.55961,-2.992638 0.51278,-0.772598 2.38639,-4.07136 3.09725,-4.275442 0.67227,-0.204082 2.75511,0.958673 3.50284,1.180763 2.85973,0.848057 5.644,1.353976 8.56032,1.353976 3.50799,0.0094 12.726,0.258104 19.55505,-4.800226 0.75545,-0.567658 2.55703,-2.731104 2.55703,-2.731104 0,0 -0.37644,-0.577091 -1.04785,-0.790605 0.89779,-0.584808 1.8659,-1.211633 1.94993,-1.925922 z"
+        style="fill:#528484;fill-opacity:1"
+        inkscape:connector-curvature="0"
+        sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"/>
+      <path
+        sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"
+        inkscape:connector-curvature="0"
+        style="fill:#528484;fill-opacity:1"
+        d="m 234.99441,42.953992 c 0.0489,-0.44418 -0.2178,-0.896934 -1.01784,-1.415715 -0.72801,-0.47505 -1.4826,-0.932949 -2.2149,-1.401138 -1.6035,-1.02813 -3.29018,-1.969653 -4.89798,-3.079245 -4.67074,-3.24131 -10.22127,-4.404923 -15.76322,-5.150939 -2.27235,-0.286401 -4.81223,-0.168925 -6.72186,-1.574351 -1.48174,-1.081294 -4.04993,-4.828523 -6.86506,-6.456038 -0.4862,-0.290688 -2.77227,-1.444869 -2.77227,-1.444869 0,0 1.30939,3.550006 1.60951,4.264295 0.69542,1.644664 -0.38158,3.063809 -0.83262,4.642447 -0.29069,1.04185 2.13772,0.8129 2.26463,1.782721 0.18179,1.432007 -4.15197,1.936211 -6.59152,2.417263 -3.65634,0.715146 -7.91635,2.082842 -11.56925,0.884072 -4.3046,-1.383131 -7.37269,-4.12967 -10.46566,-7.235496 1.43801,6.725289 5.4382,10.602857 5.6157,11.422617 0.18607,0.905508 -0.45961,1.091583 -1.04099,1.682394 -1.28967,1.265654 -6.91566,7.731125 -6.93366,9.781382 1.61379,-0.247815 3.56115,-1.660957 4.9803,-2.485862 1.58035,-0.905509 7.60593,-5.373029 9.29347,-6.065023 0.38587,-0.160351 5.0549,-1.531476 5.09434,-0.932948 0.0695,0.932948 -0.30784,1.137031 -0.18436,1.527188 0.22638,0.746016 1.44144,1.46545 2.02282,1.985088 1.50918,1.292237 3.21044,2.42841 4.27373,4.156252 1.49203,2.401827 1.55805,4.999163 1.98251,7.677102 0.99469,-0.111473 2.0091,-2.17545 2.55961,-2.992638 0.51278,-0.772598 2.38639,-4.071359 3.09725,-4.275442 0.67227,-0.204082 2.75511,0.958673 3.50284,1.180763 2.85973,0.848057 5.644,1.353976 8.56032,1.353976 3.50799,0.0094 12.726,0.258104 19.55505,-4.800226 0.75545,-0.567658 2.55703,-2.731104 2.55703,-2.731104 0,0 -0.37644,-0.57709 -1.04785,-0.790605 0.89779,-0.584808 1.8659,-1.211633 1.94993,-1.925921 z"
+        id="fish3"/>
+      <path
+        id="fish6"
+        d="m 200.07076,80.737109 c 0.0489,-0.44418 -0.2178,-0.896934 -1.01784,-1.415715 -0.72801,-0.47505 -1.4826,-0.932949 -2.2149,-1.401138 -1.6035,-1.02813 -3.29018,-1.969653 -4.89798,-3.079245 -4.67074,-3.24131 -10.22127,-4.404923 -15.76322,-5.150939 -2.27235,-0.286401 -4.81223,-0.168925 -6.72186,-1.574351 -1.48174,-1.081294 -4.04993,-4.828523 -6.86506,-6.456038 -0.4862,-0.290688 -2.77227,-1.444869 -2.77227,-1.444869 0,0 1.30939,3.550006 1.60951,4.264295 0.69542,1.644664 -0.38158,3.063809 -0.83262,4.642447 -0.29069,1.04185 2.13772,0.8129 2.26463,1.782721 0.18179,1.432007 -4.15197,1.936211 -6.59152,2.417263 -3.65634,0.715146 -7.91635,2.082842 -11.56925,0.884072 -4.3046,-1.383131 -7.37269,-4.12967 -10.46566,-7.235496 1.43801,6.725289 5.4382,10.602857 5.6157,11.422617 0.18607,0.905508 -0.45961,1.091583 -1.04099,1.682394 -1.28967,1.265654 -6.91566,7.731125 -6.93366,9.781382 1.61379,-0.247815 3.56115,-1.660957 4.9803,-2.485862 1.58035,-0.905509 7.60593,-5.373029 9.29347,-6.065023 0.38587,-0.160351 5.0549,-1.531476 5.09434,-0.932948 0.0695,0.932948 -0.30784,1.137031 -0.18436,1.527188 0.22638,0.746016 1.44144,1.46545 2.02282,1.985088 1.50918,1.292237 3.21044,2.42841 4.27373,4.156252 1.49203,2.401827 1.55805,4.999163 1.98251,7.677102 0.99469,-0.111473 2.0091,-2.17545 2.55961,-2.992638 0.51278,-0.772598 2.38639,-4.071359 3.09725,-4.275442 0.67227,-0.204082 2.75511,0.958673 3.50284,1.180763 2.85973,0.848057 5.644,1.353976 8.56032,1.353976 3.50799,0.0094 12.726,0.258104 19.55505,-4.800226 0.75545,-0.567658 2.55703,-2.731104 2.55703,-2.731104 0,0 -0.37644,-0.57709 -1.04785,-0.790605 0.89779,-0.584808 1.8659,-1.211633 1.94993,-1.925921 z"
+        style="fill:#528484;fill-opacity:1"
+        inkscape:connector-curvature="0"
+        sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"/>
+      <path
+        sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"
+        inkscape:connector-curvature="0"
+        style="fill:#528484;fill-opacity:1"
+        d="m 77.275623,89.018799 c 0.0489,-0.44418 -0.2178,-0.896934 -1.01784,-1.415715 -0.72801,-0.47505 -1.4826,-0.932949 -2.2149,-1.401138 -1.6035,-1.02813 -3.29018,-1.969653 -4.89798,-3.079245 -4.67074,-3.24131 -10.22127,-4.404923 -15.76322,-5.150939 -2.272347,-0.286401 -4.812227,-0.168925 -6.721857,-1.574351 -1.48174,-1.081294 -4.04993,-4.828523 -6.86506,-6.456038 -0.4862,-0.290688 -2.77227,-1.444869 -2.77227,-1.444869 0,0 1.30939,3.550006 1.60951,4.264295 0.69542,1.644664 -0.38158,3.063809 -0.83262,4.642447 -0.29069,1.04185 2.13772,0.8129 2.26463,1.782721 0.18179,1.432007 -4.15197,1.936211 -6.59152,2.417263 -3.65634,0.715146 -7.91635,2.082842 -11.56925,0.884072 -4.3046,-1.383131 -7.37269,-4.12967 -10.46566,-7.235496 1.43801,6.725289 5.4382,10.602857 5.6157,11.422617 0.18607,0.905508 -0.45961,1.091583 -1.04099,1.682394 -1.28967,1.265654 -6.9156603,7.731122 -6.9336603,9.781382 1.6137903,-0.24782 3.5611503,-1.66096 4.9803003,-2.48586 1.58035,-0.90551 7.60593,-5.37303 9.29347,-6.065025 0.38587,-0.160351 5.0549,-1.531476 5.09434,-0.932948 0.0695,0.932948 -0.30784,1.137031 -0.18436,1.527183 0.22638,0.74602 1.44144,1.46546 2.02282,1.98509 1.50918,1.29224 3.21044,2.42841 4.27373,4.15625 1.49203,2.40183 1.55805,4.999171 1.98251,7.677111 0.99469,-0.11148 2.0091,-2.17545 2.55961,-2.99264 0.51278,-0.7726 2.38639,-4.071361 3.09725,-4.275441 0.67227,-0.20408 2.75511,0.95867 3.50284,1.18076 2.85973,0.84806 5.644,1.35398 8.560317,1.35398 3.50799,0.009 12.726,0.2581 19.55505,-4.80023 0.75545,-0.56766 2.55703,-2.7311 2.55703,-2.7311 0,0 -0.37644,-0.57709 -1.04785,-0.79061 0.89779,-0.58481 1.8659,-1.211632 1.94993,-1.92592 z"
+        id="fish4"/>
+      <path
+        id="fish5"
+        d="m 127.65312,60.900973 c 0.0489,-0.44418 -0.2178,-0.896934 -1.01784,-1.415715 -0.72801,-0.47505 -1.4826,-0.932949 -2.2149,-1.401138 -1.6035,-1.02813 -3.29018,-1.969653 -4.89799,-3.079245 -4.67074,-3.24131 -10.22127,-4.404923 -15.76322,-5.150939 -2.27235,-0.286401 -4.812228,-0.168925 -6.721858,-1.574351 -1.48174,-1.081294 -4.04993,-4.828523 -6.86506,-6.456038 -0.4862,-0.290688 -2.77227,-1.444869 -2.77227,-1.444869 0,0 1.30939,3.550006 1.60951,4.264295 0.69542,1.644664 -0.38158,3.063809 -0.83262,4.642447 -0.29069,1.04185 2.13772,0.8129 2.26463,1.782721 0.18179,1.432007 -4.15197,1.936211 -6.59152,2.417263 -3.65634,0.715146 -7.91635,2.082842 -11.56925,0.884072 -4.3046,-1.383131 -7.37269,-4.12967 -10.46566,-7.235496 1.43801,6.725289 5.4382,10.602857 5.6157,11.422617 0.18607,0.905508 -0.45961,1.091583 -1.04099,1.682394 -1.28967,1.265654 -6.91566,7.731125 -6.93366,9.781382 1.61379,-0.247815 3.56115,-1.660957 4.9803,-2.485862 1.58035,-0.905509 7.60593,-5.373029 9.29347,-6.065023 0.38587,-0.160351 5.0549,-1.531476 5.09434,-0.932948 0.0695,0.932948 -0.30784,1.137031 -0.18436,1.527188 0.22638,0.746016 1.44144,1.46545 2.02282,1.985088 1.50918,1.292237 3.21044,2.42841 4.27373,4.156252 1.49203,2.401827 1.55805,4.999163 1.98251,7.677102 0.99469,-0.111473 2.0091,-2.17545 2.55961,-2.992638 0.51278,-0.772598 2.38639,-4.071359 3.09725,-4.275442 0.67227,-0.204082 2.75511,0.958673 3.50284,1.180763 2.85973,0.848057 5.643998,1.353976 8.560318,1.353976 3.50799,0.0094 12.726,0.258104 19.55506,-4.800226 0.75545,-0.567658 2.55703,-2.731104 2.55703,-2.731104 0,0 -0.37644,-0.57709 -1.04785,-0.790605 0.89779,-0.584808 1.8659,-1.211633 1.94993,-1.925921 z"
+        style="fill:#528484;fill-opacity:1"
+        inkscape:connector-curvature="0"
+        sodipodi:nodetypes="cccccccccccccccccccccccccccccccc"/>
+      <path
+        d="m 68.19699,20.522295 c 0.0489,-0.44418 -0.2178,-0.896934 -1.01784,-1.415715 -0.72801,-0.47505 -1.4826,-0.932949 -2.2149,-1.401138 -1.6035,-1.02813 -3.29018,-1.969653 -4.89798,-3.079245 C 55.39553,11.384887 49.845,10.221274 44.30305,9.4752582 42.0307,9.1888572 39.49082,9.3063332 37.58119,7.900907 36.09945,6.819613 33.53126,3.072384 30.71613,1.444869 30.22993,1.154181 27.94386,0 27.94386,0 c 0,0 1.30939,3.550006 1.60951,4.264295 0.69542,1.644664 -0.38158,3.063809 -0.83262,4.642447 -0.29069,1.0418502 2.13772,0.8129002 2.26463,1.782721 0.18179,1.432007 -4.15197,1.936211 -6.59152,2.417263 -3.65634,0.715146 -7.91635,2.082842 -11.56925,0.884072 C 8.52001,12.607667 5.45192,9.8611282 2.35895,6.755302 3.79696,13.480591 7.79715,17.358159 7.97465,18.177919 8.16072,19.083427 7.51504,19.269502 6.93366,19.860313 5.64399,21.125967 0.018,27.591438 0,29.641695 1.61379,29.39388 3.56115,27.980738 4.9803,27.155833 c 1.58035,-0.905509 7.60593,-5.373029 9.29347,-6.065023 0.38587,-0.160351 5.0549,-1.531476 5.09434,-0.932948 0.0695,0.932948 -0.30784,1.137031 -0.18436,1.527188 0.22638,0.746016 1.44144,1.46545 2.02282,1.985088 1.50918,1.292237 3.21044,2.42841 4.27373,4.156252 1.49203,2.401827 1.55805,4.999163 1.98251,7.677102 0.99469,-0.111473 2.0091,-2.17545 2.55961,-2.992638 0.51278,-0.772598 2.38639,-4.071359 3.09725,-4.275442 0.67227,-0.204082 2.75511,0.958673 3.50284,1.180763 2.85973,0.848057 5.644,1.353976 8.56032,1.353976 3.50799,0.0094 12.726,0.258104 19.55505,-4.800226 0.75545,-0.567658 2.55703,-2.731104 2.55703,-2.731104 0,0 -0.37644,-0.57709 -1.04785,-0.790605 0.89779,-0.584808 1.8659,-1.211633 1.94993,-1.925921 z"
+        id="fish1"/>
+    </svg>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__logo-container">
+        <img class="footer__logo" src="img/logo.png" width="200" height="77" alt="Logo">
+      </div>
+      <ul class="footer__menu menu">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Our programs</a></li>
+        <li><a href="#">For families</a></li>
+        <li><a href="#">Enrolment</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+    <div class="footer__middle">
+      <a href="https://goo.gl/maps/AuMcBYMQUJkTCiUdA" class="footer__address"><b>2-4 Kincumber Road,</b> Harrington,
+        NSW-2427</a>
+      <a class="footer__tel" href="tel:02 6556 1361">02 6556 1361</a>
+      <button class="footer__button button">Enrol now</button>
+    </div>
+    <p class="footer__copyright">©2020 seaurchinschildcare.com.au All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

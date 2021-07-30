@@ -1,0 +1,433 @@
+.enrolment {
+  h3 {
+    margin: 0;
+    margin-bottom: 11px;
+
+    font-family: "Patrick Hand", sans-serif;
+    font-size: 40px;
+    line-height: 44px;
+    color: #14a0db;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    margin: 0;
+
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #03405c;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+
+    padding-left: 33px;
+
+    margin-bottom: 14px;
+
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #03405c;
+
+    &::before {
+      content: '';
+
+      top: -2px;
+      position: absolute;
+      left: 0;
+
+      width: 21px;
+      height: 29px;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-image: url("../img/star.png");
+    }
+  }
+}
+
+.enrolment__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.enrolment__column {
+  max-width: 570px;
+  width: 100%;
+}
+
+.enrolment__title {
+  margin: 0;
+  margin-bottom: 34px;
+}
+
+.enrolment__checkbox-group {
+  padding-top: 26px;
+  padding-left: 29px;
+
+  .request__label {
+    margin-left: -5px;
+  }
+}
+
+.enrolment__checkbox-undertext {
+  margin: 0;
+  margin-top: 18px;
+  margin-bottom: 31px;
+
+  font-size: 24px;
+  line-height: 26px;
+  color: #03405c;
+  font-weight: 500;
+}
+
+.enrolment__child {
+  position: relative;
+
+  padding-bottom: 37px;
+  margin-bottom: 17px;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    margin-left: -135px;
+    width: 268px;
+    height: 28px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../img/wave.png");
+  }
+}
+
+.enrolment__parents {
+  margin-bottom: 76px;
+}
+
+.enrolment__emergency {
+  margin-bottom: 66px;
+
+  ul {
+    margin-bottom: 35px;
+  }
+}
+
+.enrolment__emergency-column {
+  margin-bottom: 8px;
+}
+
+.enrolment__emergency-number {
+  position: relative;
+  z-index: 10;
+
+  margin: 0 auto;
+  margin-bottom: 13px;
+  width: 40px;
+  height: 40px;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    z-index: -1;
+    left: -22px;
+    top: -22px;
+
+    width: 85px;
+    height: 83px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../img/emergency-number.png");
+
+  }
+}
+
+.enrolment__emergency-number-round {
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  font-size: 34px;
+  line-height: 36px;
+  font-weight: 500;
+  color: #03405c;
+  text-align: center;
+
+  background-color: #fbce5e;
+  border-radius: 50%;
+}
+
+.enrolment__unauthorised {
+  margin-bottom: 67px;
+}
+
+.enrolment__unauthorised-number {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  font-size: 34px;
+  line-height: 36px;
+  color: #fbce5e;
+  text-align: center;
+
+  background-color: #03405c;
+  border-radius: 50%;
+}
+
+.enrolment__unauthorised-row {
+  margin-bottom: 39px;
+}
+
+.enrolment__unauthorised-offer {
+  margin: 0;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  max-width: 880px;
+
+  font-size: 24px;
+  line-height: 32px;
+  color: #03405c;
+}
+
+.enrolment__medical {
+  margin-bottom: 76px;
+
+  h3 {
+    margin-bottom: 34px;
+  }
+}
+
+.enrolment__medical-block {
+  margin-bottom: 10px;
+}
+
+.enrolment__medical-checkbox-group {
+  margin-bottom: 32px;
+}
+
+.enrolment__medical-details {
+  margin-top: 13px;
+  margin-bottom: 10px;
+}
+
+.enrolment__medical-offer {
+  margin: 0;
+  padding-left: 23px;
+
+  font-size: 24px;
+  line-height: 26px;
+  color: #03405c;
+}
+
+.enrolment__information {
+  margin-bottom: 50px;
+}
+
+.enrolment__information-text-block {
+  margin-bottom: 12px;
+}
+
+.enrolment__information-offer {
+  margin: 26px 0 0;
+
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.009em;
+  color: #03405c;
+}
+
+.enrolment__authorisations {
+  margin-bottom: 35px;
+}
+
+.enrolment__authorisations-title {
+  margin-bottom: 14px;
+}
+
+.enrolment__authorisations-subtitle {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  max-width: 842px;
+
+  font-size: 24px;
+  line-height: 32px;
+  color: #03405c;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+.enrolment__authorisations-item {
+  margin-bottom: 45px;
+}
+
+.enrolment__authorisations-desc {
+  margin-top: 16px;
+  margin-bottom: 42px;
+
+  font-size: 24px;
+  line-height: 32px;
+  color: #03405c;
+  font-weight: 500;
+}
+
+.enrolment__authorisations-block {
+  display: flex;
+}
+
+.enrolment__authorisations-line {
+  width: 100%;
+  margin-left: 10px;
+
+  border-bottom: 1px dashed #03405c;
+}
+
+.enrolment__booking {
+  margin-bottom: 79px;
+
+  h3 {
+    margin-bottom: 22px;
+  }
+}
+
+.enrolment__booking-days {
+  margin-bottom: 42px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.enrolment__general {
+  p {
+    margin: 0;
+    margin-bottom: 17px;
+
+    font-size: 24px;
+    line-height: 33px;
+    color: #03405c;
+    font-weight: 500;
+  }
+
+  li {
+    padding-left: 43px;
+    letter-spacing: 0.005em;
+  }
+
+  h3 {
+    margin-top: 30px;
+  }
+}
+
+.enrolment__general-title {
+  margin-bottom: 36px;
+}
+
+@media (max-width: 1184px) {
+  .enrolment__row {
+    flex-direction: column;
+  }
+
+  .enrolment__column {
+    max-width: 100%;
+  }
+
+  .enrolment__medical {
+    h3 {
+      margin-top: 25px;
+    }
+  }
+
+  .enrolment__authorisations-block {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 763px) {
+  .enrolment {
+    h3 {
+      font-size: 24px;
+      line-height: 26px;
+    }
+
+    h4 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  .enrolment__authorisations-desc,
+  .enrolment__authorisations-subtitle,
+  .enrolment__information-offer,
+  .enrolment__unauthorised-offer,
+  .enrolment li,
+  .enrolment__medical-offer,
+  .enrolment__checkbox-undertext,
+  .enrolment__general p {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+  }
+
+  .enrolment__checkbox-group {
+    padding: 0;
+    padding-left: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .enrolment__booking-days {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 22px;
+  }
+
+  .enrolment__checkbox-group .request__label {
+    margin-left: 0;
+  }
+
+  .enrolment__medical,
+  .enrolment__unauthorised,
+  .enrolment__emergency,
+  .enrolment__parents {
+    margin-bottom: 36px;
+  }
+
+  .enrolment__unauthorised-number {
+    margin-bottom: 5px;
+  }
+
+  .enrolment__authorisations-item {
+    margin-bottom: 35px;
+  }
+
+  .enrolment__authorisations-desc {
+    margin-bottom: 22px;
+  }
+}
+
+@media print{
+  .first,
+  .request__offer ,
+  .footer {
+    display: none;
+  }
+}
